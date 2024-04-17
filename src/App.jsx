@@ -20,7 +20,9 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <h1>My To-Do List</h1>
+        <a href="https://github.com/MainakMukherjee01/To-Do_App">
+          <h1>My To-Do List</h1>
+        </a>
         <TaskStateContext.Provider
           value={{
             isComplete,
