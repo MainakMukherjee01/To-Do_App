@@ -2,11 +2,17 @@ body {
     background-color: #191919;
     color: #FEFDED;
     overflow: hidden;
+    display: flexbox;
+
 }
 
-h1 {
+a {
     text-align: center;
+    color: #fefded;
+    text-decoration: none;
+
 }
+
 
 .todo-wrapper {
     background-color: #262525;
@@ -38,7 +44,6 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     margin-right: 25px;
-
 
 }
 
@@ -85,13 +90,14 @@ h1 {
     border: none;
     border-radius: 0px;
     margin-bottom: 15px;
-    padding: 5px;;
-    width:60px;
+    padding: 5px;
+    ;
+    width: 60px;
     cursor: pointer;
 
 }
 
-.btn-area{
+.btn-area {
     margin-bottom: 10px;
 }
 
@@ -107,14 +113,14 @@ h1 {
 
 .todo-list-item {
     background-color: #303030;
-    display:inline-flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px;
     padding-bottom: 10px;
     padding-top: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 3px 5px  #191919;
+    box-shadow: 0px 3px 5px #191919;
     border-radius: 5px;
 
 }
@@ -127,14 +133,14 @@ h1 {
 
 }
 
-.todo-list-item p{
+.todo-list-item p {
     font-style: 14px;
-    color: rgb(161,161,161);
+    color: rgb(161, 161, 161);
     margin-top: 8px;
 
 }
 
-.edit-icon{
+.edit-icon {
     font-style: 35px;
     cursor: pointer;
     color: #c69749;
@@ -142,34 +148,33 @@ h1 {
 
 }
 
-.edit-icon:hover{
-    color:grey;
+.edit-icon:hover {
+    color: grey;
 
 }
 
-.delete-icon{
+.delete-icon {
     font-style: 35px;
     cursor: pointer;
     color: #a0153e
+}
+
+.delete-icon:hover {
+    color: red;
 
 }
 
-.delete-icon:hover{
-    color:red;
-
-}
-
-.check-icon{
+.check-icon {
     font-style: 25px;
     margin-left: 10px;
     color: #005b41;
 }
 
-.check-icon:hover{
-    color:green;
+.check-icon:hover {
+    color: green;
 }
 
-.edit-wrapper{
+.edit-wrapper {
     background-color: #414040;
     padding: 10px;
     display: flex;
@@ -177,19 +182,17 @@ h1 {
 
 }
 
-.edit-wrapper input, .edit-wrapper textarea{
+.edit-wrapper input,
+.edit-wrapper textarea {
     border: 1px solid lightgray;
-    padding:10px;
+    padding: 10px;
     margin: 5px;
     border-radius: 3px;
 
 }
 
-.edit-wrapper .primaryBtn{
-    margin-left:auto;
-    margin-right:5px;
+.edit-wrapper .primaryBtn {
+    margin-left: auto;
+    margin-right: 5px;
 
 }
-@media screen and (max-width: 600px){}
-@media screen and (min-width: 400px){}
-
