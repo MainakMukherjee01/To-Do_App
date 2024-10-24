@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics, inject } from "@vercel/analytics/react";
 
 import { TaskStateContext } from "./helpers/context/useContext";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
 import Tabs from "./components/Tabs";
+
+inject();
 
 const App = () => {
   const [isComplete, setIsComplete] = useState(false);
@@ -21,6 +23,7 @@ const App = () => {
   return (
     <>
       <div className="App">
+        <Analytics/>
         <a href="https://github.com/MainakMukherjee01/To-Do_App">
           <h1>My To-Do List</h1>
         </a>
