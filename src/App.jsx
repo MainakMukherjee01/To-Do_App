@@ -3,6 +3,7 @@ import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { inject } from "@vercel/analytics";
 
 import { TaskStateContext } from "./helpers/context/useContext";
@@ -22,40 +23,41 @@ const App = () => {
   const [edited, setEdited] = useState("");
 
   return (
-    <>
-      <div className="App">
-        <Analytics/>
-        <a href="https://github.com/MainakMukherjee01/To-Do_App">
-          <h1>My To-Do List</h1>
-        </a>
-        <TaskStateContext.Provider
-          value={{
-            isComplete,
-            setIsComplete,
-            pendingTasks,
-            setTasks,
-            newTitle,
-            setNewTitle,
-            newDesc,
-            setNewDesc,
-            doneTasks,
-            setDoneTasks,
-            edited,
-            setEdited,
-            currentItem,
-            setCurrentItem,
-          }}
-        >
-          <div className="todo-wrapper">
-            <AddTask />
-            <Tabs />
-            <TaskList />
-            <ToastContainer />
-          </div>
-        </TaskStateContext.Provider>
-      </div>
-    </>
-  );
+		<>
+			<div className="App">
+				<a href="https://github.com/MainakMukherjee01/To-Do_App">
+					<h1>My To-Do List</h1>
+				</a>
+				<TaskStateContext.Provider
+					value={{
+						isComplete,
+						setIsComplete,
+						pendingTasks,
+						setTasks,
+						newTitle,
+						setNewTitle,
+						newDesc,
+						setNewDesc,
+						doneTasks,
+						setDoneTasks,
+						edited,
+						setEdited,
+						currentItem,
+						setCurrentItem,
+					}}
+				>
+					<div className="todo-wrapper">
+						<AddTask />
+						<Tabs />
+						<TaskList />
+						<ToastContainer />
+					</div>
+				</TaskStateContext.Provider>
+				<SpeedInsights />
+				<Analytics />
+			</div>
+		</>
+	);
 };
 
 export default App;
