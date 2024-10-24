@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Analytics, inject } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
+import { inject } from "@vercel/analytics";
 
 import { TaskStateContext } from "./helpers/context/useContext";
 import AddTask from "./components/AddTask";
